@@ -305,7 +305,7 @@ body {
 /* RESPONSIVE HERO TITLE UNTUK LAYAR KECIL */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: clamp(42px, 10vw, 64px);
+        font-size: clamp(41px, 10vw, 64px);
         /* Ukuran font disesuaikan agar proporsional di HP */
         white-space: normal;
         /* Izinkan teks turun ke bawah */
