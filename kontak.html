@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Kontak Kami - Belution Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header/Navbar (Disamakan dengan index.html) -->
+    <header id="navbar">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Belution Studio">
+            </a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html">HOME</a>
+                <a href="tentang.html">TENTANG KAMI</a>
+                <a href="layanan.html">LAYANAN</a>
+                <a href="kontak.html" class="active">KONTAK</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero Contact Header -->
+        <section class="kontak-hero">
+            <div class="kontak-hero-content kontak-reveal-up">
+                <span class="kontak-subtitle">Hubungi Kami</span>
+                <h1 class="kontak-hero-title">Mari Wujudkan Ruang Impian Anda Bersama Kami</h1>
+                <p class="kontak-hero-desc">
+                    Punya pertanyaan, ide proyek interior, atau ingin berkonsultasi? Tim desainer dan ahli furnitur kami
+                    siap mendengarkan serta memberikan solusi terbaik.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Quick Contact Cards -->
+        <section class="kontak-cards-section">
+            <div class="kontak-container kontak-cards-grid">
+                <div class="kontak-card kontak-reveal-up">
+                    <div class="kontak-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <h3>Telepon / WhatsApp</h3>
+                    <p>Konsultasi responsif langsung dengan konsultan desain kami.</p>
+                    <a href="https://wa.me/628123456789" target="_blank" class="kontak-card-link">+62 812-3456-789</a>
+                </div>
+
+                <div class="kontak-card kontak-reveal-up">
+                    <div class="kontak-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h3>Email Pertanyaan</h3>
+                    <p>Kirimkan berkas denah atau deskripsi proyek Anda secara terperinci.</p>
+                    <a href="mailto:hello@belutionstudio.com" class="kontak-card-link">hello@belutionstudio.com</a>
+                </div>
+
+                <div class="kontak-card kontak-reveal-up">
+                    <div class="kontak-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <h3>Jam Operasional</h3>
+                    <p>Workshop & Galeri Studio kami terbuka untuk kunjungan jadwal survey.</p>
+                    <span class="kontak-card-info">Senin - Sabtu: 08:00 - 17:00 WIB</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Interactive Form & Studio Office Detail -->
+        <section class="kontak-main-section">
+            <div class="kontak-container kontak-main-grid">
+                <!-- Form Konsultasi -->
+                <div class="kontak-form-wrapper kontak-reveal-left">
+                    <div class="kontak-yellow-line"></div>
+                    <h2>Kirim Pesan Konsultasi</h2>
+                    <p class="kontak-form-desc">Isi formulir di bawah ini untuk memulai diskusi proyek interior Anda.
+                    </p>
+
+                    <form id="kontak-form" class="kontak-form">
+                        <div class="kontak-input-group">
+                            <input type="text" id="nama" name="nama" required placeholder=" ">
+                            <label for="nama">Nama Lengkap</label>
+                        </div>
+
+                        <div class="kontak-input-row">
+                            <div class="kontak-input-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Alamat Email</label>
+                            </div>
+                            <div class="kontak-input-group">
+                                <input type="tel" id="telepon" name="telepon" required placeholder=" ">
+                                <label for="telepon">Nomor WhatsApp</label>
+                            </div>
+                        </div>
+
+                        <div class="kontak-input-group">
+                            <select id="layanan" name="layanan" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="Interior Rumah">Interior Rumah / Hunian</option>
+                                <option value="Desain Kantor">Desain Kantor & Komersial</option>
+                                <option value="Custom Furniture">Manufaktur Furnitur Kustom</option>
+                                <option value="Renovasi Ruang">Renovasi & Penataan Ruang</option>
+                            </select>
+                            <label for="layanan">Layanan yang Dibutuhkan</label>
+                        </div>
+
+                        <div class="kontak-input-group">
+                            <textarea id="pesan" name="pesan" rows="4" required placeholder=" "></textarea>
+                            <label for="pesan">Jelaskan Kebutuhan / Luas Ruangan Anda</label>
+                        </div>
+
+                        <button type="submit" class="kontak-submit-btn">
+                            <span>Kirim Pesan</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Studio Info -->
+                <div class="kontak-info-wrapper kontak-reveal-right">
+                    <div class="kontak-info-card">
+                        <h3>Kunjungi Studio Kami</h3>
+                        <p>Dapatkan pengalaman materiil bahan kustom, melihat finishing, dan berkonsultasi langsung
+                            dengan arsitek interior kami.</p>
+
+                        <div class="kontak-location-item">
+                            <div class="kontak-loc-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffad00"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Alamat Workshop & Studio</h4>
+                                <p>Jl. Prof. DR. Soepomo No. 45, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12150</p>
+                            </div>
+                        </div>
+
+                        <!-- Embed Interactive Map Mockup -->
+                        <div class="kontak-map-wrapper">
+                            <iframe title="Belution Studio Location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.29291176212!2d106.7891244!3d-6.229728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%20South%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                                width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Interactive FAQ Accordion -->
+        <section class="kontak-faq-section">
+            <div class="kontak-container">
+                <div class="kontak-section-header kontak-reveal-up">
+                    <span class="kontak-subtitle">Informasi Cepat</span>
+                    <h2>Pertanyaan Sering Diajukan</h2>
+                </div>
+
+                <div class="kontak-faq-list">
+                    <div class="kontak-faq-item kontak-reveal-up">
+                        <button class="kontak-faq-question">
+                            <span>Bagaimana alur awal proses konsultasi desain interior di Belution?</span>
+                            <span class="kontak-faq-icon">+</span>
+                        </button>
+                        <div class="kontak-faq-answer">
+                            <p>Proses diawali dengan diskusi kebutuhan dan anggaran Anda, dilanjutkan dengan survey
+                                titik lokasi untuk pengukuran presisi, pembuatan visualisasi 3D, hingga tahap pengerjaan
+                                fabrikasi furnitur.</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-faq-item kontak-reveal-up">
+                        <button class="kontak-faq-question">
+                            <span>Apakah konsultasi awal dan pemetaan biaya dikenakan charge?</span>
+                            <span class="kontak-faq-icon">+</span>
+                        </button>
+                        <div class="kontak-faq-answer">
+                            <p>Sesi diskusi awal via WhatsApp/Email bersifat gratis. Estimasi perkiraan anggaran awal
+                                dapat diberikan sebelum survey tim teknis ke lapangan.</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-faq-item kontak-reveal-up">
+                        <button class="kontak-faq-question">
+                            <span>Apakah Belution bisa melayani pembuatan custom furniture saja?</span>
+                            <span class="kontak-faq-icon">+</span>
+                        </button>
+                        <div class="kontak-faq-answer">
+                            <p>Ya, tentu. Selain pengerjaan interior full-scale, workshop kami memproduksi berbagai
+                                *loose furniture* dan *built-in cabinet* secara kustom sesuai dimensi ruangan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Consultation CTA Banner -->
+        <section class="kontak-cta-section">
+            <div class="kontak-container kontak-cta-inner kontak-reveal-up">
+                <h2>Siap Mengubah Ruangan Anda Hari Ini?</h2>
+                <p>Klik tombol di bawah ini untuk terhubung langsung secara kilat dengan tim desainer utama kami via
+                    WhatsApp.</p>
+                <a href="https://wa.me/628123456789?text=Halo%20Belution%20Studio,%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior."
+                    target="_blank" class="kontak-cta-btn">
+                    <span>Chat WhatsApp Sekarang</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <!-- Kolom Kiri: Informasi & Kontak -->
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        <!-- Ganti src dengan logo Belution Anda -->
+                        <h2 class="footer-logo">BELUTION STUDIO<span>.</span></h2>
+                    </div>
+        
+                    <p class="footer-tagline">
+                        Will be the Solution!
+                    </p>
+        
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Jl. Raya Krukut No.5, RT.10/RW.1, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514</span>
+                        </li>
+                        <li>
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <a href="tel:082318214601">0823-1821-4601</a>
+                        </li>
+                        <li>
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:simpleeinteriorindonesia@gmail.com">simpleeinteriorindonesia@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Kolom Kanan: Tombol Instagram -->
+                <div class="footer-right">
+                    <a href="https://www.instagram.com/belution.studio/" target="_blank" class="btn-instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>Kunjungi Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

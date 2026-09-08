@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <title>Belution</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="VINTAGEFUR">
+      </a>
+  
+      <!-- Tombol Hamburger untuk Mobile -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  
+      <!-- Menu Navigasi -->
+      <div class="nav-menu" id="nav-menu">
+        <!-- Tambahkan class="active" pada link halaman yang sedang dibuka -->
+        <a href="index.html" class="active">HOME</a>
+        <a href="tentang.html">TENTANG KAMI</a>
+        <a href="layanan.html">LAYANAN</a>
+        <a href="kontak.html">KONTAK</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+    
+      <div class="hero-content">
+        <!-- Teks h1 akan diisi secara otomatis oleh JS agar per huruf terpisah -->
+        <h1 id="hero-title" data-text="Belution Studio">Belution</h1>
+    
+        <p class="hero-desc">
+          Setiap ruang memiliki cerita dan kebutuhan yang berbeda. Belution hadir untuk mengubah ide menjadi ruang yang
+          nyaman,
+          fungsional, dan memiliki karakter melalui solusi desain interior yang dirancang khusus untuk Anda.
+        </p>
+    
+        <!-- Tagline Highlight Baru -->
+        <p class="hero-tagline">
+          <span>"Will be the Solution"</span>
+        </p>
+    
+        <a href="kontak.html" class="contact-button">
+          <span>HUBUNGI KAMI</span>
+        </a>
+      </div>
+    </section>
+    <!-- SECTION FURNITUR (ANIMATED) -->
+    <section class="furniture-section">
+      <div class="furniture-container">
+    
+        <!-- Header tetap seperti biasa -->
+        <div class="furniture-header">
+          <div class="header-left">
+            <span class="sub-title">KAMI MEMBUAT</span>
+            <h2>Berbagai Macam<br>Furnitur</h2>
+          </div>
+          <div class="header-right">
+            <div class="yellow-line"></div>
+            <p>Belution Studio menyediakan berbagai layanan di bidang interior dan furnitur, mulai dari pembuatan kitchen
+            set, lemari pakaian, furnitur custom, hingga perancangan interior untuk rumah, kantor, apartemen, restoran,
+            kafe, dan berbagai kebutuhan ruang lainnya.</p>
+          </div>
+        </div>
+    
+        <!-- CAROUSEL TRACK -->
+        <div class="furniture-grid">
+          <div class="furniture-track" id="furniture-track">
+    
+            <!-- SET 1 -->
+            <div class="furniture-card">
+              <div class="furniture-img-wrapper">
+                <img src="images/kitchen-set.jpg" alt="Kitchen Set">
+                <div class="hover-overlay">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                    <path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <h3>Kitchen Set</h3>
+              </div>
+            </div>
+    
+            <div class="furniture-card">
+              <div class="furniture-img-wrapper">
+                <img src="images/bedroom-set.jpg" alt="Bedroom Set">
+                <div class="hover-overlay">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                    <path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <h3>Bedroom Set</h3>
+              </div>
+            </div>
+    
+            <div class="furniture-card">
+              <div class="furniture-img-wrapper">
+                <img src="images/living-room-set.jpg" alt="Living Room Set">
+                <div class="hover-overlay">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                    <path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <h3>Living Room Set</h3>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    
+    <!-- SECTION REASONS -->
+    <section class="reasons-section">
+      <div class="reasons-container">
+    
+        <!-- Left Text Box -->
+        <div class="reasons-title">
+          <span class="sub-title-white">INI 4 ALASAN MENGAPA</span>
+          <h2>Memilih Belution</h2>
+        </div>
+    
+        <!-- Right Cards Grid (2x2) -->
+        <div class="reasons-grid">
+    
+          <!-- Card 1 -->
+          <div class="reason-card">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" />
+                <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
+                <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z" />
+              </svg>
+            </div>
+            <h3>Harga yang Ramah di Kantong</h3>
+            <p>Dapatkan produk berkualitas dengan harga yang bersahabat. Anda tidak akan menemukan furnitur custom
+              berkualitas seperti ini dengan harga yang begitu terjangkau di tempat lain.</p>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="reason-card">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Pengalaman Yang Sudah Teruji</h3>
+            <p>Belution telah memantapkan eksistensinya dalam industri furnitur dan desain interior di wilayah Jabodetabek, melalui
+            karya yang mengedepankan kualitas, desain, dan kebutuhan setiap pelanggan.</p>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="reason-card">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h3>Dapat Desain 3D</h3>
+            <p>Anda tidak akan membeli kucing di dalam karung, karena Anda juga akan mendapatkan preview desain 3D dari
+              kami, ditambah dengan pelayanan survei yang memuaskan.</p>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="reason-card">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h3>Kualitas Premium & Ketahanan Maksimal</h3>
+            <p>Prioritas kami adalah membuat furnitur dengan kualitas terbaik dan pengerjaan yang rapi, menggunakan material
+              pilihan untuk memastikan durabilitas tinggi pada produk.</p>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    <!-- SECTION PROSES KERJA -->
+    <section class="process-section">
+      <div class="process-container">
+    
+        <!-- Section Header -->
+        <div class="process-header">
+          <div class="yellow-line-center"></div>
+          <h2>Proses Kerja</h2>
+          <p class="process-subtitle">
+            Langkah Mudah Mewujudkan Custom Furnitur Impian Anda bersama Belution.
+          </p>
+        </div>
+    
+        <!-- Process Steps Grid (4 Columns) -->
+        <div class="process-grid">
+    
+          <!-- Step 01 -->
+          <div class="process-step">
+            <span class="step-number">01</span>
+            <h3>Konsultasi</h3>
+            <p>
+              Ingin furnitur yang sempurna sesuai keinginan Anda? Mulailah dengan langkah pertama yang mudah. Hubungi kami
+              untuk sesi konsultasi gratis. Ceritakan tentang furnitur impian Anda, dan biarkan kami membantu mewujudkannya.
+            </p>
+          </div>
+    
+          <!-- Step 02 -->
+          <div class="process-step">
+            <span class="step-number">02</span>
+            <h3>Penawaran</h3>
+            <p>
+              Berdasarkan visi furnitur Anda, kami akan merancang penawaran eksklusif yang disesuaikan khusus untuk Anda.
+              Setelah semua detail sesuai dengan apa yang Anda inginkan, langkah selanjutnya adalah konfirmasi dengan
+              melakukan pembayaran DP—hanya 50% dari total penawaran.
+            </p>
+          </div>
+    
+          <!-- Step 03 -->
+          <div class="process-step">
+            <span class="step-number">03</span>
+            <h3>Pengerjaan</h3>
+            <p>
+              Pembayaran Anda adalah sinyal bagi tim pengrajin kami untuk segera bertindak. Kami memulai proses pembuatan
+              furnitur Anda dengan cepat dan efisien, tanpa mengorbankan kualitas dan perhatian terhadap detail.
+            </p>
+          </div>
+    
+          <!-- Step 04 -->
+          <div class="process-step">
+            <span class="step-number">04</span>
+            <h3>Pelunasan</h3>
+            <p>
+              Ketika furnitur impian Anda telah selesai dibuat dan siap untuk menghiasi ruangan Anda, kami akan segera
+              mengatur pengiriman. Anda dapat melakukan pelunasan setelah furnitur telah tiba di tempat Anda.
+            </p>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    <!-- SECTION CTA & STATS -->
+    <section class="cta-stats-section">
+      <!-- Top Banner / CTA -->
+      <div class="cta-banner">
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+          <h2>Ayo Buat Interior Rumah Anda<br>Unik dan Berbeda</h2>
+          <p>Apakah Anda sudah memiliki ide untuk membuat furnitur tertentu? Atau mungkin Anda membutuhkan inspirasi dari
+            kami? Segera hubungi kami, dan kami akan dengan senang hati membantu Anda.</p>
+          <a href="kontak.html" class="btn-cta">Ya Saya Mau!</a>
+        </div>
+      </div>
+    
+      <div class="stats-wrapper">
+        <div class="stats-container">
+      
+          <!-- Item 1: Profesional (Ikon Briefcase/Dasi) -->
+          <div class="stat-item">
+            <div class="stat-number">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <p class="stat-label">PROFESIONAL</p>
+          </div>
+      
+          <!-- Item 2: Bergaransi (Ikon Perisai Centang) -->
+          <div class="stat-item">
+            <div class="stat-number">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <p class="stat-label">BERGARANSI</p>
+          </div>
+      
+          <!-- Item 3: Berkualitas (Ikon Bintang Kualitas / Badge) -->
+          <div class="stat-item">
+            <div class="stat-number">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <p class="stat-label">BERKUALITAS</p>
+          </div>
+      
+          <!-- Item 4: Kreatif (Ikon Lampu Ide) -->
+          <div class="stat-item">
+            <div class="stat-number">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffad00" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+                <path
+                  d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+              </svg>
+            </div>
+            <p class="stat-label">KREATIF</p>
+          </div>
+      
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Kolom Kiri: Informasi & Kontak -->
+        <div class="footer-left">
+          <div class="footer-brand">
+            <!-- Ganti src dengan logo Belution Anda -->
+            <h2 class="footer-logo">BELUTION STUDIO<span>.</span></h2>
+          </div>
+    
+          <p class="footer-tagline">
+            Will be the Solution!
+          </p>
+    
+          <ul class="footer-contact-list">
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Jl. Raya Krukut No.5, RT.10/RW.1, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514</span>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <a href="tel:082318214601">0823-1821-4601</a>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:simpleeinteriorindonesia@gmail.com">simpleeinteriorindonesia@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Kolom Kanan: Tombol Instagram -->
+        <div class="footer-right">
+          <a href="https://www.instagram.com/belution.studio/" target="_blank" class="btn-instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Kunjungi Instagram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+  <div class="image-modal" id="image-modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Preview Gambar Fullscreen">
+    <div id="modal-caption"></div>
+  </div>
+</body>
+
+</html>
