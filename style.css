@@ -389,12 +389,6 @@ body {
     backdrop-filter: blur(4px);
 }
 
-/* Penyesuaian margin tombol kontak agar jaraknya tetap proporsional */
-.contact-button {
-    margin-top: 35px;
-    /* Disesuaikan dari sebelumnya 50px */
-}
-
 /* Responsif Mobile */
 @media (max-width: 768px) {
     .hero-tagline {
@@ -407,7 +401,8 @@ body {
 .contact-button {
     position: relative;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 40%;
+    /* <--- NILAI INI YANG DIPERBESAR (sebelumnya 50px) */
     padding: 17px 39px;
     background: #ffad00;
     color: #fff;
@@ -446,6 +441,7 @@ body {
 .contact-button:hover {
     background: #e69c00;
     transform: translateY(-3px);
+    /* Ini efek naik saat dihover, biarkan saja */
     box-shadow: 0 10px 25px rgba(255, 173, 0, 0.4);
 }
 
@@ -456,28 +452,6 @@ body {
     }
 }
 
-
-/* ================================
-   CONTACT BUTTON
-================================ */
-
-.contact-button {
-    display: inline-block;
-    margin-top: 355px;
-    padding: 17px 39px;
-    background: #ffad00;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: all 0.25s ease;
-}
-
-.contact-button:hover {
-    background: #e69c00;
-    transform: translateY(-2px);
-}
 
 /* ================================
    FURNITURE SECTION & TRACK
@@ -1297,7 +1271,154 @@ body {
         font-size: 11px;
     }
 }
+/* =========================================
+   GALERI SECTION - BENTO GRID PORTRAIT (9:16)
+   ========================================= */
 
+.galeri-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeri-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.galeri-subtitle {
+    color: #ffad00;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.galeri-title {
+    font-size: 36px;
+    color: #333;
+    /* Ubah ke #fff jika website menggunakan tema gelap */
+    margin: 10px 0;
+}
+
+.galeri-yellow-line {
+    width: 60px;
+    height: 3px;
+    background-color: #ffad00;
+    margin: 15px auto;
+}
+
+.galeri-desc {
+    color: #666;
+    /* Ubah ke #ccc jika website menggunakan tema gelap */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* --- Susunan Bento Grid Portrait --- */
+.galeri-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 380px;
+    /* Tinggi dasar untuk bentuk portrait */
+    gap: 20px;
+}
+
+.galeri-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Penyesuaian Ukuran Kotak Portrait (9:16) --- */
+.item-tall {
+    grid-column: span 1;
+    grid-row: span 2;
+    /* Membuat kotak memanjang ke bawah (tinggi) */
+}
+
+.item-normal {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* --- Styling Video & Animasi --- */
+.galeri-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Memastikan video mengisi bingkai portrait dengan pas */
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.galeri-item:hover .galeri-video {
+    transform: scale(1.08);
+}
+
+/* --- Overlay Teks --- */
+.galeri-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 30px 20px 20px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.galeri-item:hover .galeri-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.galeri-overlay h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffad00;
+}
+
+.galeri-overlay p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+/* =========================================
+   RESPONSIVITAS (TABLET & MOBILE)
+   ========================================= */
+
+@media (max-width: 992px) {
+    .galeri-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .galeri-bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 450px;
+        /* Lebih tinggi di HP agar benar-benar terasa vertikal */
+    }
+
+    .item-tall {
+        grid-row: span 1;
+        /* Di HP dinormalkan jadi 1 baris penuh agar rapi */
+    }
+
+    .galeri-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+}
 /* HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HALAMAN TENTANG KAMI HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH */
 
 /* ==========================================
@@ -1341,7 +1462,7 @@ body {
    ------------------------------------------ */
 .about-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url('images/bg1.jpeg') center/cover no-repeat;
+        url('images/panjang.jpg') center/cover no-repeat;
     background-attachment: fixed;
     /* Membuat gambar tetap diam/statis saat di-scroll */
     padding: 140px 20px 80px 20px;
@@ -1352,6 +1473,11 @@ body {
 .about-hero-content {
     max-width: 800px;
     margin: 0 auto;
+
+    /* Menerapkan animasi saat halaman dimuat */
+    animation: aboutHeroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    /* Mulai dalam keadaan transparan */
 }
 
 .about-hero-title {
@@ -1367,6 +1493,20 @@ body {
     line-height: 1.6;
 }
 
+/* Definisi Keyframes untuk animasi muncul awal */
+@keyframes aboutHeroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        /* Mulai dari posisi 30px di bawah */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Berhenti di posisi normal */
+    }
+}
 /* ------------------------------------------
    SECTION 2: STORY & VISION
    ------------------------------------------ */
@@ -1435,9 +1575,21 @@ body {
 /* ------------------------------------------
    SECTION 3: VALUES
    ------------------------------------------ */
+.about-values-section {
+    position: relative;
+    /* Ganti URL di bawah dengan link/path gambar Anda */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/panjang.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Membuat gambar tetap (tidak ikut scroll) */
+    padding: 80px 0;
+    /* Sesuaikan padding atas & bawah sesuai kebutuhan */
+    text-align: center;
+}s
 
 .about-section-header {
-    text-align: center;
+    
     margin-bottom: 50px;
 }
 
@@ -1483,76 +1635,6 @@ body {
     line-height: 1.6;
 }
 
-/* ------------------------------------------
-   SECTION 4: COUNTER BANNER
-   ------------------------------------------ */
-.about-counter-section {
-    background-color: var(--about-dark);
-    padding: 60px 0;
-    color: var(--about-white);
-}
-
-.about-counter-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-}
-
-.about-counter-num {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--about-yellow);
-    margin-bottom: 5px;
-}
-
-.about-counter-item p {
-    font-size: 1rem;
-    color: #cccccc;
-    letter-spacing: 1px;
-}
-
-/* ------------------------------------------
-   SECTION 5: WORKFLOW TIMELINE
-   ------------------------------------------ */
-.about-workflow-section {
-    padding: 90px 0;
-    background-color: var(--about-white);
-}
-
-.about-workflow-timeline {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.about-timeline-item {
-    position: relative;
-    background: var(--about-bg-light);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-.about-timeline-num {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-.about-timeline-content h4 {
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-    color: var(--about-dark);
-}
-
-.about-timeline-content p {
-    font-size: 0.9rem;
-    color: var(--about-gray);
-    line-height: 1.6;
-}
 
 /* ------------------------------------------
    ANIMATIONS & RESPONSIVE
@@ -1691,6 +1773,9 @@ body {
     letter-spacing: 2px;
     margin-bottom: 8px;
 }
+.service-subtitle-atas .h2{
+    color: #1a1a1a;
+}
 
 .service-yellow-line {
     width: 60px;
@@ -1720,57 +1805,86 @@ body {
 /* --- SECTION 1: HERO LAYANAN --- */
 .service-hero {
     position: relative;
-    padding: 160px 24px 10px;
-    background-color: #faf9f6;
+    /* Ganti 'path/ke/gambar-anda.jpg' dengan link atau direktori gambar Anda */
+    background-image: url('images/panjang2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Kunci agar background tetap (tidak ikut bergerak saat di-scroll) */
+    min-height: 50vh;
+    /* Sesuaikan tinggi section sesuai kebutuhan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    overflow: hidden;
+    padding: 80px 20px;
+}
+
+/* Overlay untuk menggelapkan gambar background agar teks lebih kontras */
+.service-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Atur tingkat kepekatan (0.5 = 50% gelap) */
+    z-index: 1;
 }
 
 .service-hero-content {
-    max-width: 800px;
-    margin: 0 auto;
     position: relative;
     z-index: 2;
+    /* Agar konten berada di atas overlay */
+    max-width: 800px;
+    color: #ffffff;
+}
+
+.service-hero-content .service-subtitle {
+    display: inline-block;
+    color: var(--service-yellow, #ffad00);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    margin-top: 50px;
 }
 
 .service-hero-title {
     font-size: 3rem;
-    color: #111;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-top: 10px;
+    font-weight: 700;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .service-hero-desc {
-    font-size: 1.125rem;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 32px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f1f1f1;
 }
 
 .service-btn-primary {
     display: inline-block;
-    padding: 14px 36px;
-    background-color: #ffad00;
-    color: #111;
-    font-weight: 700;
-    border-radius: 50px;
+    background-color: var(--service-yellow, #ffad00);
+    color: #111111;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(255, 173, 0, 0.25);
+    transition: background-color 0.3s ease;
 }
 
 .service-btn-primary:hover {
-    background-color: #e69c00;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(255, 173, 0, 0.35);
+    background-color: #e09b00;
 }
-
 /* --- SECTION 2: GRID LAYANAN UNGGULAN --- */
 .service-grid-section {
     padding: 90px 0;
     background-color: #ffffff;
+}
+.service-grid-section .service-container .service-section-header h2{
+    color: #1a1a1a;
 }
 
 .service-cards-wrapper {
@@ -1847,7 +1961,23 @@ body {
 /* --- SECTION 3: PAKET LAYANAN --- */
 .service-packages-section {
     padding: 90px 0;
-    background-color: #fcfcf9;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/panjang2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Penyesuaian warna teks header agar kontras di atas background gelap */
+.service-section-header .service-subtitle {
+    color: #ffad00;
+}
+
+.service-section-header h2 {
+    color: #ffffff;
+}
+
+.service-section-header .service-header-desc {
+    color: #cccccc;
 }
 
 .service-packages-grid {
@@ -1944,7 +2074,6 @@ body {
     background: #e69c00;
     border-color: #e69c00;
 }
-
 /* --- SECTION 4: MATERIAL ACCORDION --- */
 .service-material-section {
     padding: 90px 0;
@@ -2241,9 +2370,13 @@ body {
    SECTION 1: HERO
    -------------------------------------------------------------------------- */
 .kontak-hero {
-    padding: 140px 20px 80px;
-    background: linear-gradient(180deg, rgba(255, 253, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+            url('images/kontak.jpg') center/cover no-repeat;
+        background-attachment: fixed;
+        /* Membuat gambar tetap diam/statis saat di-scroll */
+        padding: 140px 20px 80px 20px;
+        text-align: center;
+        color: var(--about-white);
 }
 
 .kontak-hero-content {
@@ -2263,7 +2396,7 @@ body {
 
 .kontak-hero-title {
     font-size: 2.8rem;
-    color: #111111;
+    color: #ffffff;
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 700;
@@ -2271,7 +2404,7 @@ body {
 
 .kontak-hero-desc {
     font-size: 1.1rem;
-    color: #666666;
+    color: #c7c7c7;
     line-height: 1.6;
 }
 
@@ -2279,7 +2412,7 @@ body {
    SECTION 2: QUICK CONTACT CARDS
    -------------------------------------------------------------------------- */
 .kontak-cards-section {
-    padding: 20px 0 60px;
+    padding: 50px 0 60px;
     background-color: #ffffff;
 }
 
@@ -2291,7 +2424,7 @@ body {
 
 .kontak-card {
     background: #fafafa;
-    border: 1px solid #eeeeee;
+    border: 1.5px solid #ffad00;
     border-radius: 12px;
     padding: 35px 25px;
     transition: all 0.3s ease;
@@ -2523,13 +2656,41 @@ body {
     margin-top: auto;
     border: 1px solid #e0e0e0;
 }
+@media (max-width: 768px) {
+    .kontak-main-section {
+        padding: 40px 15px;
+        /* Mengurangi padding di layar kecil */
+    }
 
+    .kontak-main-grid {
+        grid-template-columns: 1fr;
+        /* Menumpuk form dan info studio menjadi 1 kolom */
+        gap: 30px;
+    }
+
+    .kontak-input-row {
+        grid-template-columns: 1fr;
+        /* Menumpuk input email dan WA menjadi atas-bawah */
+        gap: 0;
+    }
+
+    /* Opsi: Membalik urutan agar Info/Peta muncul lebih dulu di atas form (Hapus jika ingin form tetap di atas) */
+    /* 
+    .kontak-form-wrapper { order: 2; }
+    .kontak-info-wrapper { order: 1; } 
+    */
+}
 /* --------------------------------------------------------------------------
    SECTION 4: FAQ ACCORDION
    -------------------------------------------------------------------------- */
 .kontak-faq-section {
-    padding: 80px 0;
-    background-color: #fafafa;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+            url('images/kontak.jpg') center/cover no-repeat;
+        background-attachment: fixed;
+        /* Membuat gambar tetap diam/statis saat di-scroll */
+        padding: 100px 20px 80px 20px;
+        text-align: center;
+        color: var(--about-white);
 }
 
 .kontak-section-header {
@@ -2539,7 +2700,7 @@ body {
 
 .kontak-section-header h2 {
     font-size: 2.2rem;
-    color: #111111;
+    color: #ffffff;
 }
 
 .kontak-faq-list {
@@ -2730,13 +2891,100 @@ body {
     }
 }
 
+/* --- Styling Popup Hitam & Gold --- */
+.popup-overlay {
+    display: none;
+    /* Disembunyikan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Latar belakang gelap transparan */
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Class tambahan saat popup dipanggil */
+.popup-overlay.muncul {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    background-color: #111111;
+    /* Hitam pekat elegan */
+    border: 1px solid #d4af37;
+    /* Garis tepi warna Gold */
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+    /* Bayangan emas tipis */
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.muncul .popup-content {
+    transform: translateY(0) scale(1);
+}
+
+.popup-icon svg {
+    width: 60px;
+    height: 60px;
+    stroke: #D4AF37;
+    /* Warna ikon Gold */
+    margin-bottom: 15px;
+}
+
+.popup-title {
+    color: #D4AF37;
+    /* Teks Gold */
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.popup-desc {
+    color: #CCCCCC;
+    /* Abu-abu terang agar kontras dengan hitam */
+    font-size: 14px;
+    margin: 0 0 25px 0;
+}
+
+.popup-btn {
+    background-color: #D4AF37;
+    /* Tombol Gold */
+    color: #111111;
+    /* Teks Hitam di dalam tombol */
+    border: none;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+    background-color: #F3C623;
+    /* Emas yang lebih terang saat di-hover */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
 /* HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH Footer HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH */
 
 /* Styling Utama Footer */
 .site-footer {
     background-color: #0d0d0d;
     color: #ffffff;
-    padding: 60px 20px;
+    padding: 35px 20px;
     border-top: 1px solid #1a1a1a;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -2761,7 +3009,7 @@ body {
     font-weight: 800;
     letter-spacing: 2px;
     color: #ffffff;
-    margin: 0 0 16px 0;
+    margin: 0 0 0 0;
 }
 
 .footer-logo span {
@@ -2774,7 +3022,8 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     font-weight: 400;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 /* Daftar Kontak */
