@@ -12,26 +12,23 @@
 </head>
 
 <body>
-  <!-- NAVBAR -->
+  <!-- Navbar sama persis dengan index.html -->
   <header id="navbar">
     <nav>
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="VINTAGEFUR">
       </a>
   
-      <!-- Tombol Hamburger untuk Mobile -->
       <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
   
-      <!-- Menu Navigasi -->
       <div class="nav-menu" id="nav-menu">
-        <!-- Tambahkan class="active" pada link halaman yang sedang dibuka -->
-        <a href="index.html" class="active">HOME</a>
+        <a href="index.html"class="active">HOME</a>
         <a href="tentang.html">TENTANG KAMI</a>
-        <a href="layanan.html">LAYANAN</a>
+        <a href="layanan.html" >LAYANAN</a>
         <a href="kontak.html">KONTAK</a>
       </div>
     </nav>
@@ -133,7 +130,50 @@
     
       </div>
     </section>
+    <!-- SECTION VIDEO -->
+    <section class="galeri-section">
+      <div class="galeri-header">
+        <span class="galeri-subtitle">Karya Kami</span>
+        <h2 class="galeri-title">Dari Desain Menjadi Ruang</h2>
+        <div class="galeri-yellow-line"></div>
+        <p class="galeri-desc">Intip hasil pekerjaan kami dan lihat bagaimana setiap konsep diwujudkan menjadi ruang yang nyata.</p>
+      </div>
     
+      <div class="galeri-bento-grid">
+        <!-- Item 1: Tinggi (Memanjang ke bawah) -->
+        <div class="galeri-item item-tall">
+          <video class="galeri-video" autoplay loop muted playsinline>
+            <source src="video/1.mp4" type="video/mp4">
+          </video>
+          <div class="galeri-overlay">
+            <h3>Living Room Minimalis</h3>
+            <p>Residential</p>
+          </div>
+        </div>
+    
+        <!-- Item 2: Normal Vertikal -->
+        <div class="galeri-item item-tall">
+          <video class="galeri-video" autoplay loop muted playsinline>
+            <source src="video/2.mp4" type="video/mp4">
+          </video>
+          <div class="galeri-overlay">
+            <h3>Pantry & Kitchen Set</h3>
+            <p>Custom Furniture</p>
+          </div>
+        </div>
+    
+        <!-- Item 3: Normal Vertikal -->
+        <div class="galeri-item item-tall">
+          <video class="galeri-video" autoplay loop muted playsinline>
+            <source src="video/3.mp4" type="video/mp4">
+          </video>
+          <div class="galeri-overlay">
+            <h3>Master Bedroom</h3>
+            <p>Interior Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <!-- SECTION REASONS -->
     <section class="reasons-section">
@@ -360,7 +400,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              <span>Jl. Raya Krukut No.5, RT.10/RW.1, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514</span>
+              <span>Jl. Pabuaran Landeh RT 2/5, Bogor, Jawa Barat</span>
             </li>
             <li>
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -368,14 +408,14 @@
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                 </path>
               </svg>
-              <a href="tel:082318214601">0823-1821-4601</a>
+              <a href="kontak.html">0851-8316-6171</a>
             </li>
             <li>
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <a href="mailto:simpleeinteriorindonesia@gmail.com">simpleeinteriorindonesia@gmail.com</a>
+              <a href="kontak.html">belution.studio@gmail.com</a>
             </li>
           </ul>
         </div>
