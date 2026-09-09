@@ -471,31 +471,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 20. Form Submission Kontak Handling
-  const kontakForm = document.getElementById("kontak-form");
-
-  if (kontakForm) {
-    kontakForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const submitBtn = kontakForm.querySelector(".kontak-submit-btn");
-      const originalText = submitBtn ? submitBtn.innerHTML : "";
-
-      if (submitBtn) {
-        submitBtn.style.pointerEvents = "none";
-        submitBtn.innerHTML = `<span>Sending...</span>`;
-      }
-
-      setTimeout(() => {
-        alert("Terima kasih! Pesan Anda telah terkirim. Tim Belution Studio akan segera menghubungi Anda.");
-        kontakForm.reset();
-
-        if (submitBtn) {
-          submitBtn.style.pointerEvents = "auto";
-          submitBtn.innerHTML = originalText;
-        }
-      }, 1500);
-    });
-  }
-
 });
