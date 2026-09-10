@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# 1. Mapping /home -> index.html
+RewriteRule ^home/?$ index.html [NC,L]
+
+# 2. Mapping halaman lain (contoh)
+RewriteRule ^tentang-kami/?$ tentang.html [NC,L]
+RewriteRule ^layanan/?$ layanan.html [NC,L]
+RewriteRule ^kontak/?$ kontak.html [NC,L]
+
+# 3. (Opsional) Blokir akses langsung ke index.html biar orang harus lewat /home
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ /home [R=301,L]
+
+# 4. (Opsional) Redirect .html lain juga ke versi tanpa ekstensi
+RewriteCond %{THE_REQUEST} \s/+([^\.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
